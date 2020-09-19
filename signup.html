@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>sign up</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+	<Link href="https://icons8.com/icon/14850/massage">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'></Link>
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<!-- Navigation -->
+	<nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a style="color:black" class="navbar-brand navbar-left" href="index.jsp">
+                	<span  class="glyphicon glyphicon-fire"></span> 
+                	HOME SERVICE
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div  class=" navbar" id="navbar">
+                <ul class="nav  navbar-right">
+                    <li class="active">
+                        <a style="font-size:20px;" href="#">About Us</a>
+                    </li>
+                  <li>
+                        <a style="font-size:20px;" href="#">Register As A Professional</a>
+					</li>
+					
+                  <li>
+                        <a style="font-size:20px;" href="login.html">Login </a>
+					</li>
+				
+                </ul>
+                
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+	<script>
+        function validatePassword()
+        {
+  			var pass = document.getElementById("signpassword").value;
+  			var re_pass = document.getElementById("signre_password").value;
+  			if(pass=="" ||re_pass==""  ){
+         		document.getElementById("password_message").innerHTML = "password is empty";
+         	}else if(pass==re_pass){
+
+                  	 document.getElementById("Registerbutton").disabled = false;
+                    document.getElementById("password_message").innerHTML = "";
+        	 }else{ 
+             		 document.getElementById("Registerbutton").disabled = true;
+            document.getElementById("password_message").innerHTML = "password is not matching ";
+			  		
+           }
+	}
+    </script>
+	<div class="container-login100" style="background-image: url('images/nordwood-themes-EZSm8xRjnX0-unsplash.jpg');">
+		<div class="wrap-login200 p-l-55 p-r-55 p-t-50 p-b-30">
+			<form class="login100-form validate-form" method="post" action="signup.jsp">
+				<span class="login100-form-title p-b-37">
+					Sign up
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your Name ">
+					<input class="input100" type="text" name="username" id="username" placeholder="Name">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter email">
+					<input class="input100" type="text" name="email" id="email" placeholder="Email">
+					<span class="focus-input100"></span>
+				</div>
+									
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Enter your Password">
+					<input class="input100" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"   onkeyup="validatePassword()" id="signpassword" name="password" title="Must contain atleast one number and one uppercase and lowercase letter, and at least 6 or more characters" required="" minlength="6" placeholder="Password">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Re-Enter password">
+					<input class="input100" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  onkeyup="validatePassword()" id="signre_password" name="re_enter_password" title="Must contain atleast one number and one uppercase and lowercase letter, and at least 6 or more characters" required="" minlength="6" placeholder="Re-Enter password">
+					<span class="focus-input100"></span>
+				</div>
+				<span style="color: red;" id="password_message"></span>
+				<style>
+					input::-webkit-outer-spin-button,
+					input::-webkit-inner-spin-button {
+					   -webkit-appearance: none;
+					   margin: 0;
+					}
+					input[type="number"] {
+					   -moz-appearance: number;
+					}
+				</style> 
+				<div class="wrap-input100 validate-input m-b-25" data-validate = "Enter Phone Number">
+					<input class="input100" type="number" name="phone_number" id="phone_number" placeholder="Phone Number">
+					<span class="focus-input100"></span>
+				</div>		
+
+
+				<div class="container-login100-form-btn">
+					<button id="Registerbutton" class="login100-form-btn" type="submit" value="submit">
+						register
+					</button>
+				</div>
+
+				<!-- <div class="text-center p-t-57 p-b-20">
+					<span class="txt1">
+						Or login with
+					</span>
+				</div>
+					-->
+
+				<!-- <div class="text-center">
+					<a href="#" class="txt2 hov1">
+						Sign Up
+					</a>
+				</div>
+					-->
+			</form>
+
+			
+		</div>
+	</div>
+	
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
